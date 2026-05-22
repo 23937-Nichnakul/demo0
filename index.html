@@ -33,7 +33,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         /* การ์ดโปรไฟล์หลัก */
@@ -57,10 +57,9 @@
             padding: 40px 20px;
             text-align: center;
             color: #ffffff;
-            position: relative;
         }
 
-        /* รูปจำลอง (คุณสามารถเปลี่ยน src เป็นลิงก์รูปจริงของคุณได้) */
+        /* รูปจำลอง */
         .profile-avatar {
             width: 110px;
             height: 110px;
@@ -121,6 +120,7 @@
             margin-right: 15px;
             color: var(--primary-blue);
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .info-content {
@@ -139,15 +139,24 @@
             color: var(--text-dark);
         }
 
-        /* ตกแต่งพิเศษสำหรับสีที่ชอบ */
-        .color-badge {
-            display: inline-block;
-            padding: 2px 12px;
-            background-color: var(--primary-blue);
+        /* ตกแต่งป้ายแท็ก (Badge) */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 12px;
             color: #ffffff;
             border-radius: 20px;
             font-size: 0.9rem;
             margin-top: 2px;
+            margin-right: 5px;
+        }
+        
+        .badge-blue { background-color: var(--primary-blue); }
+        .badge-dark { background-color: #334155; }
+        
+        .badge i {
+            margin-right: 6px;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -170,7 +179,20 @@
                 </div>
                 <div class="info-content">
                     <div class="info-label">วันเกิด</div>
-                    <div class="info-value">6 มิถุายน 2553</div>
+                    <div class="info-value">6 มิถุนายน 2553</div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="info-content">
+                    <div class="info-label">วิชาที่ชอบ</div>
+                    <div class="info-value">
+                        <span class="badge badge-dark"><i class="fa-solid fa-calculator"></i>คณิตศาสตร์</span>
+                        <span class="badge badge-dark"><i class="fa-solid fa-laptop-code"></i>คอมพิวเตอร์</span>
+                    </div>
                 </div>
             </div>
 
@@ -191,8 +213,18 @@
                 <div class="info-content">
                     <div class="info-label">สีที่ชอบ</div>
                     <div class="info-value">
-                        <span class="color-badge"><i class="fa-solid fa-circle" style="color: #3b82f6; margin-right: 5px;"></i>สีน้ำเงิน</span>
+                        <span class="badge badge-blue"><i class="fa-solid fa-circle" style="color: #60a5fa;"></i>สีน้ำเงิน</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div class="info-content">
+                    <div class="info-label">เพื่อนสนิท</div>
+                    <div class="info-value">มังกร</div>
                 </div>
             </div>
 
