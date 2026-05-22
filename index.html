@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว | Nichanakul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #1e3c72;
+            --light-blue: #2a5298;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-dark: #333333;
+            --text-muted: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* การ์ดโปรไฟล์หลัก */
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ส่วนหัวสีน้ำเงินไล่เฉด */
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+
+        /* รูปจำลอง (คุณสามารถเปลี่ยน src เป็นลิงก์รูปจริงของคุณได้) */
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #ffffff;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .profile-avatar i {
+            font-size: 50px;
+            color: var(--primary-blue);
+        }
+
+        .profile-header h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-header p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+
+        /* ส่วนรายละเอียดข้อมูล */
+        .profile-body {
+            padding: 30px 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(30, 60, 114, 0.1);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        .info-content {
+            flex: 1;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .info-value {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        /* ตกแต่งพิเศษสำหรับสีที่ชอบ */
+        .color-badge {
+            display: inline-block;
+            padding: 2px 12px;
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <h1>ณิชณกุล กล่อมแสร์</h1>
+            <p>ฌิน (Chin)</p>
+        </div>
+
+        <div class="profile-body">
+            
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <div class="info-content">
+                    <div class="info-label">วันเกิด</div>
+                    <div class="info-value">6 มิถุายน 2553</div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div class="info-content">
+                    <div class="info-label">อาหารที่ชอบ</div>
+                    <div class="info-value">ข้าวขาหมู</div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="info-content">
+                    <div class="info-label">สีที่ชอบ</div>
+                    <div class="info-value">
+                        <span class="color-badge"><i class="fa-solid fa-circle" style="color: #3b82f6; margin-right: 5px;"></i>สีน้ำเงิน</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
