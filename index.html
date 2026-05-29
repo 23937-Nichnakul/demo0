@@ -138,6 +138,12 @@
         /* รูปแบบกล่องแสดงผลแบบ Grid ข้างในกล่องย่อย */
         .info-grid {
             display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .info-grid-2col {
+            display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
@@ -189,7 +195,7 @@
             flex-direction: column;
         }
 
-        /* สไตล์ Pill / Tag ปุ่มกลมสำหรับพวกทักษะและแนวเพลง */
+        /* สไตล์ Pill / Tag ปุ่มกลมสำหรับพวกทักษะ แนวเพลง และอนิเมะ */
         .tag-container {
             display: flex;
             flex-wrap: wrap;
@@ -211,6 +217,12 @@
             background: #f0fdf4;
             color: #166534;
             border: 1px solid rgba(22, 101, 52, 0.15);
+        }
+
+        .pill-tag.anime-tag {
+            background: #faf5ff;
+            color: #6b21a8;
+            border: 1px solid rgba(107, 33, 168, 0.15);
         }
 
         /* คติประจำใจ (Quote Box) */
@@ -297,7 +309,7 @@
                     <div class="section-title">
                         <i class="fa-solid fa-id-card"></i> ข้อมูลส่วนตัวทั่วไป
                     </div>
-                    <div class="info-grid">
+                    <div class="info-grid-2col" style="margin-bottom: 12px;">
                         <div class="info-item">
                             <span class="info-label">วันเกิด</span>
                             <span class="info-value">6 มิถุนายน 2553</span>
@@ -311,8 +323,14 @@
                             <span class="info-value">B</span>
                         </div>
                         <div class="info-item">
+                            <span class="info-label">ราศี</span>
+                            <span class="info-value">-</span>
+                        </div>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
                             <span class="info-label">ภูมิลำเนา</span>
-                            <span class="info-value">เชียงใหม่</span>
+                            <span class="info-value">ต.บ้านหลวง อ.จอมทอง จ.เชียงใหม่</span>
                         </div>
                     </div>
                 </div>
@@ -406,44 +424,4 @@
                     <div class="section-title">
                         <i class="fa-solid fa-icons"></i> ความบันเทิงที่ชอบ
                     </div>
-                    <div class="info-item" style="margin-bottom: 10px;">
-                        <span class="info-label">แนวเพลงที่ชอบฟัง</span>
-                        <div class="tag-container">
-                            <span class="pill-tag">Phonk</span>
-                            <span class="pill-tag">J-Pop</span>
-                            <span class="pill-tag">Lo-Fi</span>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">ซีรีส์ / อนิเมะโปรด</span>
-                        <span class="info-value" style="color: var(--primary-dark); font-weight: 500;"><i class="fa-solid fa-film" style="font-size:9pt; margin-right:4px;"></i> Frieren: Beyond Journey's End</span>
-                    </div>
-                </div>
-
-                <div class="section-card">
-                    <div class="section-title">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> ทักษะ & ความสามารถ
-                    </div>
-                    <div class="tag-container" style="margin-top: 5px;">
-                        <span class="pill-tag accent-tag"><i class="fa-solid fa-paintbrush"></i> วาดรูป</span>
-                        <span class="pill-tag accent-tag"><i class="fa-solid fa-palette"></i> ระบายสี</span>
-                        <span class="pill-tag accent-tag"><i class="fa-solid fa-language"></i> อ่านภาษาอังกฤษออก</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="quote-box">
-            <i class="fa-solid fa-quote-left"></i>
-            <div class="quote-text">"งานท่วมหัว เอาตัวให้รอด"</div>
-            <div class="info-label" style="margin-top: 4px; font-size: 8.5pt;">คติประจำใจ</div>
-        </div>
-
-        <div class="footer">
-            นักเรียนระดับชั้นมัธยมศึกษาตอนต้น • โรงเรียนจอมทอง จังหวัดเชียงใหม่
-        </div>
-    </div>
-
-</body>
-</html>
+                    <div class
