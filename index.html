@@ -60,7 +60,7 @@
         .header-banner {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
             margin: -20mm -15mm 25px -15mm;
-            padding: 30px 20mm;
+            padding: 25px 20mm;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -84,6 +84,12 @@
         }
 
         .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nickname-container {
             text-align: right;
         }
 
@@ -96,6 +102,17 @@
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             display: inline-block;
+        }
+
+        /* สไตล์รูปโปรไฟล์ทรงกลม */
+        .profile-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+            background-color: #ffffff;
         }
 
         /* การจัดหน้ากล่องแบบกริดแบ่งซ้ายขวา */
@@ -112,13 +129,22 @@
             gap: 20px;
         }
 
-        /* การ์ดแยกแต่ละ Section */
+        /* การ์ดแยกแต่ละ Section พร้อมเอฟเฟกต์ชี้แล้วนูนขึ้น */
         .section-card {
             background: #ffffff;
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.01);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+        }
+
+        /* เอฟเฟกต์เมื่อเมาส์ชี้ (Hover Effect) การ์ดจะนูนเด่นขึ้นมา */
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(2, 132, 199, 0.08);
+            border-color: rgba(2, 132, 199, 0.2);
         }
 
         .section-title {
@@ -236,6 +262,13 @@
             margin-top: auto;
             text-align: center;
             position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .quote-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(2, 132, 199, 0.08);
         }
 
         .quote-text {
@@ -277,11 +310,15 @@
                 border-radius: 0;
                 page-break-inside: avoid;
             }
+            .section-card:hover, .quote-box:hover {
+                transform: none !important;
+                box-shadow: none !important;
+            }
             .header-banner {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
-            .list-icon, .pill-tag, .quote-box {
+            .list-icon, .pill-tag, .quote-box, .profile-avatar {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
@@ -289,9 +326,9 @@
     </style>
 </head>
 <body>
-    <img src="https://cms.dmpcdn.com/moviearticle/2026/01/15/b93c8c80-f1f5-11f0-9d5e-d95a3a172db7_webp_original.webp" alt="Frieren">
+
     <div class="a4-container">
-        <!-- ส่วนหัวแบนเนอร์แสดงชื่อและโรงเรียน -->
+        <!-- ส่วนหัวแบนเนอร์แสดงชื่อ โรงเรียน และรูปโปรไฟล์ -->
         <div class="header-banner">
             <div class="header-left">
                 <h1>นายณิชณกุล กล่อมแสร์</h1>
@@ -301,7 +338,10 @@
                 </div>
             </div>
             <div class="header-right">
-                <div class="nickname-badge">ชื่อเล่น: ฌิน</div>
+                <div class="nickname-container">
+                    <div class="nickname-badge">ชื่อเล่น: ฌิน</div>
+                </div>
+                <img class="profile-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocKmWSVq1LmwbTuGGMyCnka2CJnHqBSFTzVV-kFMWH0s7S381Z4=s288-c-no" alt="Profile Picture">
             </div>
         </div>
 
